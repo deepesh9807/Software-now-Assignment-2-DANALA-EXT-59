@@ -16,9 +16,9 @@ def shift_character_backward(character, shift_value, range_start, range_end):
         ascii_value = ord(range_end) - (ord(range_start) - ascii_value - 1)
     return chr(ascii_value) # change num back to character
 
-#************************
+#+++++++++++++++++++++++#
 #   Encrypt character   #
-#************************
+#+++++++++++++++++++++++#
 def encrypt_letter(character, shift1, shift2): 
     if 'a' <= character <= 'm': #lowercase character a-m
         return shift_character_forward(character, shift1 * shift2, 'a', 'z') #shift forward
@@ -31,9 +31,9 @@ def encrypt_letter(character, shift1, shift2):
     else: #numbers, symbols and punctuations characteracters remain unchanged
         return character
 
-#************************#
+#++++++++++++++++++++++++#
 #    Decrypt character   #
-#************************#
+#++++++++++++++++++++++++#
 
 def decrypt_letter(character, shift1, shift2, original_character):
     if 'a' <= original_character <= 'm': # original lowercase character a-m
