@@ -3,7 +3,7 @@ import turtle
 # Function to draw a single edge of the fractal edge
 def draw_edge(t, length, depth):
     if depth == 0:
-        t.forward(length) # Move the turtle forward by given length
+        t.forward(length)
     else: 
         length_third = length / 3 # divide length into three parts
 
@@ -15,7 +15,7 @@ def draw_edge(t, length, depth):
         t.right(60) # turn right 60 degrees to realign direction
         draw_edge(t, length_third, depth - 1) # draw the fourth third (straight)
 
-# Function to draw the complete fractal edge polygon
+# Function to draw the complete fractal edge
 def draw_polygon(t, sides, side_length, depth): 
     angle = 360 / sides # Calculate the turning angle for the edges 
     for _ in range(sides): 
@@ -23,9 +23,9 @@ def draw_polygon(t, sides, side_length, depth):
         t.right(angle) #turn right to position for the next side
 
 def main():
-    sides = int(input("Enter the number of sides: ")) 
-    side_length = int(input("Enter the side length: ")) 
-    depth = int(input("Enter the recursion depth: ")) 
+    sides = int(input("please Enter the number of sides: ")) 
+    side_length = int(input("please Enter the side length: ")) 
+    depth = int(input("please Enter the recursion depth: ")) 
 
     screen = turtle.Screen() 
     screen.bgcolor("white") # Set background color to white
